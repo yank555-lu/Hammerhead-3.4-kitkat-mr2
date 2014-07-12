@@ -566,3 +566,10 @@ service mdnsd /system/bin/mdnsd
     socket mdnsd stream 0660 mdnsr inet
     disabled
     oneshot
+
+# Start kernel configuration
+service yank555-kernel /system/bin/sh /system/etc/init.yank555.lu.kernel.sh
+    class late_start
+    user root
+    group root
+    oneshot
